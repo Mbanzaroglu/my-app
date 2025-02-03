@@ -99,7 +99,7 @@ export default function Deneyimler() {
                   }
                 }}
               >
-                {exp.technologies.map((tech, techIndex) => (
+                {exp.technologies.map((tech) => (
                   <motion.span
                     key={tech}
                     variants={{

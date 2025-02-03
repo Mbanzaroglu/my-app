@@ -83,9 +83,7 @@ export default function Hakkimda() {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: 0.4 }}
                             >
-                                Bunun yanı sıra, <Link href="https://www.ituogrenci.org.tr/" className="text-blue-600 dark:text-blue-400 hover:underline">itüöder</Link> Yönetim Kurulu Üyesi olarak, 
-                                İTÜ öğrencileri ve mezunlarına yönelik projeler geliştiriyor, topluluk çalışmalarında aktif rol alıyorum. 
-                                Sürekli öğrenmeyi, yeni teknolojileri efektik şekilde kullanmanın yollarını keşfetmeyi ve bunları projelerimde uygulamayı seviyorum.
+                                Bunun yanı sıra, <Link href="https://www.ituogrenci.org.tr/" className="text-blue-600 dark:text-blue-400 hover:underline">itüöder</Link> Yönetim Kurulu Üyesi olarak, İTÜ öğrencileri ve mezunlarına yönelik projeler geliştiriyor, topluluk çalışmalarında aktif rol alıyorum. Sürekli öğrenmeyi, yeni teknolojileri efektik şekilde kullanmanın yollarını keşfetmeyi ve bunları projelerimde uygulamayı seviyorum.
 
                             </motion.p>
 
