@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <div className="relative w-48 h-48 mb-8 overflow-hidden rounded-full ring-4 ring-blue-600 dark:ring-blue-400">
-        <Image src="/placeholder.svg?height=200&width=200" alt="Profil Resmi" layout="fill" objectFit="cover" />
+        <Image src="/me.JPG" alt="Profil Resmi" layout="fill" objectFit="cover" />
       </div>
       <h1 className="text-4xl font-bold mb-4 text-center">Hoş Geldiniz!</h1>
       <p className="text-xl mb-8 text-center max-w-2xl text-gray-700 dark:text-gray-300">
-        Merhaba, ben [Adınız Soyadınız]. Bu web sitesinde kendimi tanıtıyor ve deneyimlerimi paylaşıyorum.
+        Merhaba, ben Muhammet Banzaroğlu. Bu web sitesinde kendimden ve tecrübelerimden bahsediyor olacağım..
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[

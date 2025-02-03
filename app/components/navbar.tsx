@@ -9,10 +9,13 @@ const Navbar = () => {
   const pathname = usePathname()
 
   useEffect(() => {
+    console.log("isDark state changed:", isDark)
     if (isDark) {
       document.documentElement.classList.add("dark")
+      console.log("Dark mode enabled")
     } else {
       document.documentElement.classList.remove("dark")
+      console.log("Dark mode disabled")
     }
   }, [isDark])
 
@@ -30,7 +33,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-blue-600 dark:text-blue-400">
-            Adınız Soyadınız
+            Muhammet Banzaroğlu
           </Link>
           <div className="hidden md:flex space-x-4">
             {navItems.map((item) => (
