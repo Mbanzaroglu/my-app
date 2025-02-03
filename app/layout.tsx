@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
+import { Inter } from "next/font/google"
+import Navbar from "./components/navbar"
+import Footer from "./components/footer"
+import type React from "react"
+
+const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,17 +25,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        main layout
-        {children}
+    <html lang="tr" className="scroll-smooth">
+      <body className={`${inter.className} bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100`}>
+        <Navbar />
+        <main className="container mx-auto px-4 py-8">{children}</main>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
