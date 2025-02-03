@@ -47,7 +47,7 @@ export default function Hobiler() {
         {
           title: "Video Oyunları",
           icon: Gamepad,
-          description: "AOE2, CS:GO, LOL, LF42 gibi hem fps hem de strateji oyunlarını vakit buldukça arkadaşlarımla beraber oynarım.",
+          description: "AOE2, CS:GO, LOL, L4D2 gibi hem fps hem de strateji oyunlarını vakit buldukça arkadaşlarımla beraber oynarım.",
           image: "/Video-Games.webp",
         },
       ]

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Muhammet Banzaroğlu - Kişisel Web Sitesi",
-  description: "Yazılım geliştirici ve tasarımcı Muhammet Banzaroğlu'nun kişisel web sitesi",
+  description: "Muhammet Banzaroğlu'nun kişisel web sitesi",
 }
 
 export default function RootLayout({

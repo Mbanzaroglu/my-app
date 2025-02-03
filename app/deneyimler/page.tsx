@@ -21,7 +21,7 @@ export default function Deneyimler() {
         technologies: ["AppScript", "Google Sheets", "Python", "Ekip Yönetimi", "İnsan Etkileşimi", "Kurumsal İletişim", "Canva", "GPT Model Eğitimi"],
       },
     {
-      title: "Stajyer ABAP Geliştirici",
+      title: "ABAP Geliştirme Stajyeri",
       company: "NTT Data Bussines Solutions",
       period: "2024 Temmuz - 2024 Eylül",
       description: "SAP sistemler için ABAP programlama dili ile geliştirme ve algoritma dizaynı.",
