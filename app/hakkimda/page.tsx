@@ -72,9 +72,9 @@ export default function Hakkimda() {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                             >
-                                Merhaba, Ben Muhammet Banzaroğlu, İstanbul Teknik Üniversitesi'nde Bilgisayar Mühendisliği son sınıf öğrencisiyim. 
-                                Yazılım geliştirme, algoritmalar ve veri yapıları konularına büyük ilgi duyuyorum. 
-                                Şu anda Ziraat Teknoloji'de part-time Full Stack Developer olarak çalışıyorum ve hem .NET backend hem de React frontend geliştirme üzerine yoğunlaşıyorum.
+                                Merhaba, Ben Muhammet Banzaroğlu, İstanbul Teknik Üniversitesi&apos;nde Bilgisayar Mühendisliği son sınıf öğrencisiyim. 
+          Yazılım geliştirme, algoritmalar ve veri yapıları konularına büyük ilgi duyuyorum. 
+          Şu anda Ziraat Teknoloji&apos;de part-time Full Stack Developer olarak çalışıyorum ve hem .NET backend hem de React frontend geliştirme üzerine yoğunlaşıyorum.
 
                             </motion.p>
                             <motion.p
