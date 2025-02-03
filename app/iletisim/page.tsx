@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { useState } from "react"
 import GradientHeading from "../components/GradientHeading"
+import emailjs from "emailjs-com"
 
 export default function Iletisim() {
   const [formData, setFormData] = useState({
@@ -14,8 +15,18 @@ export default function Iletisim() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Form gönderme işlemi burada yapılacak
-    console.log(formData)
+
+    emailjs.send(
+      'service_my-app', // EmailJS servis ID'nizi buraya ekleyin
+      'template_51ts5xa', // EmailJS şablon ID'nizi buraya ekleyin
+      formData,
+      'MwugMpf0gCBPr8Pqo' // EmailJS kullanıcı ID'nizi buraya ekleyin
+    ).then((result) => {
+      console.log(result.text)
+      setFormData({ name: "", email: "", message: "" })
+    }, (error) => {
+      console.log(error.text)
+    })
   }
 
   return (
@@ -35,7 +46,7 @@ export default function Iletisim() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">E-posta</p>
-                  <p className="text-white">ornek@email.com</p>
+                  <p className="text-white">muhammettbanzaroglu@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -44,7 +55,7 @@ export default function Iletisim() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Telefon</p>
-                  <p className="text-white">+90 123 456 7890</p>
+                  <p className="text-white">+90 534 411 00 61</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">

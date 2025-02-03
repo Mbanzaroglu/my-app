@@ -7,19 +7,47 @@ import GradientHeading from "../components/GradientHeading"
 export default function Deneyimler() {
   const experiences = [
     {
-      title: "Kıdemli Yazılım Geliştirici",
-      company: "Tech Company",
-      period: "2021 - Günümüz",
-      description: "Modern web uygulamaları geliştirme, teknik liderlik ve mentorluk.",
-      technologies: ["React", "Node.js", "AWS", "Docker"],
+      title: "Full Stack Yazılım Geliştirici",
+      company: "Ziraat Teknoloji",
+      period: "2024 Eylül - Günümüz",
+      description: "Bankaya web tabanlı uygulamalar geliştirme ve bakım.",
+      technologies: ["React", "Node.js", ".NET", "Git", "MySQL", "Intellij IDE", "Visual Studio Code"],
     },
     {
-      title: "Yazılım Geliştirici",
-      company: "Software Inc.",
-      period: "2019 - 2021",
-      description: "Full-stack web uygulamaları geliştirme ve API tasarımı.",
-      technologies: ["React", "Express.js", "PostgreSQL"],
+        title: "Yönetim Kurulu Üyesi - Otomasyon Yöneticisi",
+        company: "itüöder (İTÜ Öğrencileri Derneği)",
+        period: "2024 Mart - Günümüz",
+        description: "İTÜ öğrencileri ve mezunları için sosyal, kültürel, psikolojik ve mesleki alanlarda hizmetler sunan derneğin yönetim kurulu üyeliği ve kullanılan sistemlerin otomasyon süreçlerinin yönetimi, yapay zeka modeli eğitimi.",
+        technologies: ["AppScript", "Google Sheets", "Python", "Ekip Yönetimi", "İnsan Etkileşimi", "Kurumsal İletişim", "Canva", "GPT Model Eğitimi"],
+      },
+    {
+      title: "Stajyer ABAP Geliştirici",
+      company: "NTT Data Bussines Solutions",
+      period: "2024 Temmuz - 2024 Eylül",
+      description: "SAP sistemler için ABAP programlama dili ile geliştirme ve algoritma dizaynı.",
+      technologies: ["ABAP", "Open SQL", "Notion", "Jira", "SAP"],
     },
+    {
+        title: "Yazılım Stajyeri",
+        company: "Senktron Software",
+        period: "2023 Ocak - 2023 Mart",
+        description: "Stajyer projesi kapsamında canlı açık artırma sitesinin Full Stack tasarımı ve implementasyonu.",
+        technologies: ["Angular", "PostgreSQL", "Python", "Notion", "Vscode"],
+      },
+      {
+        title: "Yazılım Stajyeri",
+        company: "Garanti Technology",
+        period: "2021 Haziran - 2021 Eylül",
+        description: "Veri tabanı ve web tabanlı uygulamaların takibi ve süreç iyileştirmesi. Dokümantasyon hazırlama ve test süreçlerine katılım.",
+        technologies: ["SQL", "Microsoft Excel", "Jenkins", "Vscode"],
+      },
+      {
+        title: "İnsan Kaynakları Asistanı",
+        company: "Öğrenci Kariyeri",
+        period: "2020 Eylül - 2021 Haziran",
+        description: "YEA mezunları olarak markanın işe alım süreçlerine dair eğitim ve sonrasında mülakat yürütme sürecinde aktif görev alma.",
+        technologies: ["Microsoft Teams", "Microsoft Power Point", "Notion", "Google Sheets"],
+      },
   ]
 
   return (

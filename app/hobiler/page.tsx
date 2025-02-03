@@ -1,37 +1,57 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Camera, Music, Book, Gamepad } from "lucide-react"
+import { Camera, Dumbbell, Book, Globe, Gamepad } from "lucide-react";
+import { FaSwimmer, FaFistRaised } from "react-icons/fa"; // FontAwesome kullanımı
 import Image from "next/image"
 import GradientHeading from "../components/GradientHeading"
 
 export default function Hobiler() {
-  const hobbies = [
-    {
-      title: "Fotoğrafçılık",
-      icon: Camera,
-      description: "Doğa ve sokak fotoğrafçılığı ile ilgileniyorum.",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Müzik",
-      icon: Music,
-      description: "Gitar çalıyorum ve müzik prodüksiyonu yapıyorum.",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Okuma",
-      icon: Book,
-      description: "Bilim kurgu ve teknik kitaplar okumayı seviyorum.",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Oyunlar",
-      icon: Gamepad,
-      description: "Strateji ve RPG oyunları oynamaktan keyif alıyorum.",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-  ]
+    const hobbies = [
+        {
+          title: "Fotoğrafçılık",
+          icon: Camera,
+          description: "Sokak ve Portre Fotoğrafçılığı yaparak hikaye anlatıcılığı yapıyorum",
+          image: "/Fotoğrafçılık.webp",
+        },
+        {
+          title: "Fitness & Gym",
+          icon: Dumbbell,
+          description: "2+ yıldır düzenli olarak orta tempo vücut geliştirme yapıyorum.",
+          image: "/Gym.webp",
+        },
+        {
+          title: "Kick Boks",
+          icon: FaFistRaised,
+          description: "2 yıllık orta-segment kick boks eğitimi aldım. Öğrenci kulüplerinde eğitmenlik yaptım.",
+          image: "/Kick-boks.webp",
+        },
+        {
+          title: "Kitap Okuma",
+          icon: Book,
+          description: "Teknik, Türk Romanı ve Deneme türlerindeki kitapları okurum.",
+          image: "/Kitap.webp",
+        },
+        {
+          title: "Yüzme",
+          icon: FaSwimmer,
+          description: "Belirli periyotlarda bir kardiyo olarak serbest stil yüzüyorum.",
+          image: "/Swimming.webp",
+        },
+        {
+          title: "Seyahat",
+          icon: Globe,
+          description: "Yeni yerleri farklı gruptan insanlarla, bazen tek başıma keşfederim ve eşsiz spotları bulmaya çalışırım.",
+          image: "/Traveling.webp",
+        },
+        {
+          title: "Video Oyunları",
+          icon: Gamepad,
+          description: "AOE2, CS:GO, LOL, LF42 gibi hem fps hem de strateji oyunlarını vakit buldukça arkadaşlarımla beraber oynarım.",
+          image: "/Video-Games.webp",
+        },
+      ]
+      
 
   return (
 <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">

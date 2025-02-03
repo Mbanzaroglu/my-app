@@ -8,17 +8,17 @@ export default function Egitim() {
     const education = [
         {
             degree: "Bilgisayar Mühendisliği",
-            school: "Örnek Üniversitesi",
-            period: "2016 - 2020",
-            description: "Yazılım geliştirme, algoritma analizi ve veri yapıları üzerine yoğunlaştım.",
-            achievements: ["Yüksek Onur Öğrencisi", "Bölüm Birinciliği"],
+            school: "İstanbul Teknik Üniversitesi",
+            period: "2020 - 2025",
+            description: "Yazılım geliştirme, algoritma analizi ve veri yapıları üzerine yoğunlaştım. Bilgisayar organizasyonu ve Mikroişlemciler alanındaki derslerde üstün başarı gösterdim",
+            achievements: ["Onur Öğrencisi [3.01 GPA]"],
         },
         {
-            degree: "Veri Bilimi Sertifikası",
-            school: "Online Akademi",
-            period: "2021",
-            description: "Makine öğrenimi ve veri analizi üzerine kapsamlı eğitim.",
-            achievements: ["En İyi Proje Ödülü"],
+            degree: "Değişim Öğrencisi",
+            school: "West Attica Üniversitesi - Yunanistan",
+            period: "2023 Ocak - 2023 Temmuz",
+            description: "35 AKTS kredilik dönemde, Yunan kültürü ve dilini öğrenme fırsatı buldum. Aynı zamanda 10'dan fazla ülkeyi uluslararası öğrenci topluluğu ile ziyaret ettim.",
+            achievements: ["En İyi Kısa Film Ödülü"],
         },
     ]
 
