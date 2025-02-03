@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react"
 
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -29,7 +29,7 @@ export default function HeroSection() {
   ]
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(76,29,149,0.1),rgba(15,23,42,0))]" />
@@ -50,11 +50,17 @@ export default function HeroSection() {
           className="mb-12"
         >
           <div className="relative w-40 h-40 mx-auto mb-8">
-            <div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse"
+            <motion.div
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
               style={{ transform: "scale(1.05)" }}
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
             />
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10">
+            <motion.div
+              className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10"
+              whileHover={{ scale: 1.2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Image
                 src="/me.JPG"
                 alt="Profil Fotoğrafı"
@@ -62,7 +68,7 @@ export default function HeroSection() {
                 objectFit="cover"
                 className="rounded-full"
               />
-            </div>
+            </motion.div>
           </div>
 
           <motion.h1
@@ -75,17 +81,26 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12"
           >
-            Merhaba, ben Muhammet Banzaroğlu. Bu web sitesinde kendimden ve tecrübelerimden bahsediyor olacağım..
+            {"Merhaba, ben Muhammet Banzaroğlu. Bu web sitesinde kendimden ve tecrübelerimden bahsediyor olacağım..".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 + index * 0.01 }}
+              >
+                {char}
+              </motion.span>
+            ))}
           </motion.p>
         </motion.div>
 
         {/* Navigation grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
           {navigationItems.map((item, index) => (
             <motion.div
               key={item.title}
@@ -106,8 +121,30 @@ export default function HeroSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center gap-6 mt-6">
+          {[
+            { href: "https://github.com/Mbanzaroglu", icon: <Github size={28} /> },
+            { href: "https://www.linkedin.com/in/muhammet-banzaroglu/", icon: <Linkedin size={28} /> },
+            { href: "https://www.instagram.com/muhammetbanzaroglu/", icon: <Instagram size={28} /> },
+          ].map((item, index) => (
+            <motion.a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 + index * 0.2, type: "spring", stiffness: 200, damping: 10 }}
+              whileHover={{ scale: 1.2 }}
+              className="text-gray-400 hover:text-white transition-all duration-300"
+            >
+              {item.icon}
+            </motion.a>
+          ))}
+        </div>
       </div>
     </div>
   )
 }
-
