@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Camera, Music, Book, Gamepad } from "lucide-react"
 import Image from "next/image"
+import GradientHeading from "../components/GradientHeading"
 
 export default function Hobiler() {
   const hobbies = [
@@ -33,15 +34,11 @@ export default function Hobiler() {
   ]
 
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
-        >
-          Hobilerim
-        </motion.h1>
+<div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12">
+        <GradientHeading className="text-3xl md:text-4xl font-bold mb-4 text-left">
+                        Hobiler
+        </GradientHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {hobbies.map((hobby, index) => (

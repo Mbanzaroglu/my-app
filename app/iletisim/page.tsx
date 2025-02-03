@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { useState } from "react"
+import GradientHeading from "../components/GradientHeading"
 
 export default function Iletisim() {
   const [formData, setFormData] = useState({
@@ -18,15 +19,11 @@ export default function Iletisim() {
   }
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
-        >
-          İletişim
-        </motion.h1>
+        <GradientHeading className="text-3xl md:text-4xl font-bold mb-4 text-left">
+                        İletişim
+                      </GradientHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
