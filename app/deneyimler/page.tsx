@@ -1,40 +1,74 @@
-import { Briefcase } from "lucide-react"
+"use client"
+
+import { motion } from "framer-motion"
+import { Briefcase, Calendar } from "lucide-react"
 
 export default function Deneyimler() {
   const experiences = [
     {
-      title: "Yazılım Geliştirici",
-      company: "ABC Teknoloji",
-      period: "Ocak 2020 - Günümüz",
-      description: "Full-stack web uygulamaları geliştirme, API tasarımı ve uygulama, veritabanı yönetimi.",
+      title: "Kıdemli Yazılım Geliştirici",
+      company: "Tech Company",
+      period: "2021 - Günümüz",
+      description: "Modern web uygulamaları geliştirme, teknik liderlik ve mentorluk.",
+      technologies: ["React", "Node.js", "AWS", "Docker"],
     },
     {
-      title: "Stajyer Yazılım Mühendisi",
-      company: "XYZ Yazılım",
-      period: "Haziran 2019 - Ağustos 2019",
-      description: "Mobil uygulama geliştirme projelerinde yer aldım, kullanıcı arayüzü tasarımı ve kodlama yaptım.",
+      title: "Yazılım Geliştirici",
+      company: "Software Inc.",
+      period: "2019 - 2021",
+      description: "Full-stack web uygulamaları geliştirme ve API tasarımı.",
+      technologies: ["React", "Express.js", "PostgreSQL"],
     },
-    // Diğer deneyimlerinizi buraya ekleyin
+    // Diğer deneyimler buraya eklenebilir
   ]
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">İş Deneyimlerim</h1>
-      <div className="space-y-8">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-transform duration-200 transform hover:scale-105"
-          >
-            <div className="flex items-center mb-4">
-              <Briefcase className="text-blue-600 dark:text-blue-400 mr-2" size={24} />
-              <h2 className="text-2xl font-semibold">{exp.title}</h2>
-            </div>
-            <h3 className="text-xl text-gray-600 dark:text-gray-400 mb-2">{exp.company}</h3>
-            <p className="text-gray-500 dark:text-gray-500 mb-4">{exp.period}</p>
-            <p className="text-gray-700 dark:text-gray-300">{exp.description}</p>
-          </div>
-        ))}
+    <div className="min-h-screen pt-20">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
+        >
+          Deneyimler
+        </motion.h1>
+
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="relative p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700"
+            >
+              <div className="flex flex-col md:flex-row md:items-center gap-4">
+                <div className="flex-1">
+                  <h2 className="text-xl font-semibold text-white">{exp.title}</h2>
+                  <div className="flex items-center gap-2 text-gray-400 mt-1">
+                    <Briefcase size={16} />
+                    <span>{exp.company}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-400 mt-1">
+                    <Calendar size={16} />
+                    <span>{exp.period}</span>
+                  </div>
+                  <p className="mt-4 text-gray-300">{exp.description}</p>
+                </div>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {exp.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 rounded-full text-sm bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   )

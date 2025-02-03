@@ -1,7 +1,8 @@
 "use client"
 
+import { motion } from "framer-motion"
+import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { useState } from "react"
-import { Mail, Linkedin, Github, Twitter } from "lucide-react"
 
 export default function Iletisim() {
   const [formData, setFormData] = useState({
@@ -10,113 +11,108 @@ export default function Iletisim() {
     message: "",
   })
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Burada form gönderme işlemini gerçekleştirebilirsiniz
+    // Form gönderme işlemi burada yapılacak
     console.log(formData)
-    alert("Mesajınız gönderildi!")
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">İletişim</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <p className="mb-4">Benimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
-          <ul className="space-y-2">
-            <li className="flex items-center">
-              <Mail className="mr-2 text-blue-600 dark:text-blue-400" size={20} />
-              <span>ornek@email.com</span>
-            </li>
-            <li className="flex items-center">
-              <Linkedin className="mr-2 text-blue-600 dark:text-blue-400" size={20} />
-              <a
-                href="https://linkedin.com/in/adinizsoyadiniz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
+    <div className="min-h-screen pt-20">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
+        >
+          İletişim
+        </motion.h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
+            <h2 className="text-xl font-semibold mb-6">İletişim Bilgileri</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-blue-500/10">
+                  <Mail className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">E-posta</p>
+                  <p className="text-white">ornek@email.com</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-blue-500/10">
+                  <Phone className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Telefon</p>
+                  <p className="text-white">+90 123 456 7890</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-blue-500/10">
+                  <MapPin className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Konum</p>
+                  <p className="text-white">İstanbul, Türkiye</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">
+                  İsim
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-1">
+                  E-posta
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-1">
+                  Mesaj
+                </label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  rows={4}
+                  className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 transition-colors"
               >
-                linkedin.com/in/adinizsoyadiniz
-              </a>
-            </li>
-            <li className="flex items-center">
-              <Github className="mr-2 text-blue-600 dark:text-blue-400" size={20} />
-              <a
-                href="https://github.com/kullaniciadiniz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                github.com/kullaniciadiniz
-              </a>
-            </li>
-            <li className="flex items-center">
-              <Twitter className="mr-2 text-blue-600 dark:text-blue-400" size={20} />
-              <a
-                href="https://twitter.com/twitterkullaniciadiniz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                @twitterkullaniciadiniz
-              </a>
-            </li>
-          </ul>
+                <Send size={20} />
+                Gönder
+              </button>
+            </form>
+          </motion.div>
         </div>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-              İsim
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-              E-posta
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-100">
-              Mesaj
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="4"
-              className="w-full px-3 py-2 text-gray-900 border rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-          >
-            Gönder
-          </button>
-        </form>
       </div>
     </div>
   )
