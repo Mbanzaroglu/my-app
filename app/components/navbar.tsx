@@ -47,9 +47,9 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm transition-colors ${
+                  className={`text-sm transition-transform transform ${
                     pathname === item.href ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-white"
-                  }`}
+                  } hover:scale-110`}
                 >
                   {item.name}
                 </Link>
@@ -80,11 +80,11 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-transform transform ${
                       pathname === item.href
                         ? "text-blue-400 bg-gray-800"
                         : "text-gray-300 hover:text-white hover:bg-gray-700"
-                    }`}
+                    } hover:scale-110`}
                   >
                     {item.name}
                   </Link>
@@ -97,4 +97,3 @@ export default function Navbar() {
     </>
   )
 }
-
