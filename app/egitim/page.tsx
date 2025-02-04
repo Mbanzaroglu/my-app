@@ -5,6 +5,14 @@ import { GraduationCap, Calendar, Award } from "lucide-react"
 import GradientHeading from "../components/GradientHeading"
 import { useLocale } from "@/contexts/LocaleContext"
 
+interface Education {
+    degree: string;
+    school: string;
+    period: string;
+    description: string;
+    achievements: string[];
+}
+
 export default function Egitim() {
     const { t } = useLocale() // JSON'dan çeviri verilerini alıyoruz
 
@@ -16,7 +24,7 @@ export default function Egitim() {
                 </GradientHeading>
 
                 <div className="space-y-8">
-                    {t("education.degrees").map((edu, index: number) => (
+                    {(t("education.degrees") as unknown as Education[]).map((edu, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +69,7 @@ export default function Egitim() {
                                                 {t("education.achievements")}
                                             </h3>
                                             <motion.ul className="list-disc list-inside text-gray-300 space-y-1">
-                                                {edu.achievements.map((achievement: string, i: number) => (
+                                                {edu.achievements.map((achievement, i) => (
                                                     <motion.li
                                                         key={i}
                                                         variants={{
