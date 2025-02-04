@@ -102,7 +102,7 @@ export default function Hakkimda() {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 {t("about-me.ituoder.before")}
-                <Link href={t("about-me.ituoder.href")} className="text-blue-600 dark:text-blue-400 hover:underline">
+                <Link href={t("about-me.ituoder.href")} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
                   {t("about-me.ituoder.link_text")}
                 </Link>
                 {t("about-me.ituoder.after")}
