@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import Image from "next/image"
-import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react"
+import { Github, Linkedin, Mail, Instagram } from "lucide-react"
 import GradientHeading from "../components/GradientHeading"
 import Link from "next/link"
 import { useLocale } from "@/contexts/LocaleContext"
