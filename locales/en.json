@@ -14,7 +14,9 @@
       "send": "Send",
       "email_address": "muhammettbanzaroglu@gmail.com",
       "phone_number": "+90 534 411 00 61",
-      "location_address": "Istanbul, Turkey"
+      "location_address": "Istanbul, Turkey",
+      "success_message": "Your message has been sent successfully. You will be contacted shortly.",
+      "error_message": "An error occurred. Please try again later."
     },
     "navbar": {
       "home": "Home",
