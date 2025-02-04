@@ -86,7 +86,7 @@ export default function Hakkimda() {
 
                             {/* Sosyal Linkler */}
                             <div className="flex flex-wrap gap-4">
-                                {Object.entries(t("about-me.links")).map(([key, link]: any, index) => (
+                                {Object.entries(t("about-me.links")).map(([key, link], index) => (
                                     <motion.a
                                         key={key}
                                         href={link.href}

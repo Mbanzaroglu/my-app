@@ -12,8 +12,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
-  const { locale, setLocale, t } = useLocale() // Dil verilerini çekiyoruz
+  const { locale, t } = useLocale() // Dil verilerini çekiyoruz
 
 
   useEffect(() => {

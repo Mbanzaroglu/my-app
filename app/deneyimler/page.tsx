@@ -16,7 +16,7 @@ export default function Deneyimler() {
         </GradientHeading>
 
         <div className="space-y-8">
-          {t("experiences.experience_list").map((exp: any, index: number) => (
+          {t("experiences.experience_list").map((exp, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}

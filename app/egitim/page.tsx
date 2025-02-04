@@ -16,7 +16,7 @@ export default function Egitim() {
                 </GradientHeading>
 
                 <div className="space-y-8">
-                    {t("education.degrees").map((edu: any, index: number) => (
+                    {t("education.degrees").map((edu, index: number) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
