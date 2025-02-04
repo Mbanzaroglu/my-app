@@ -137,8 +137,8 @@ export default function Hakkimda() {
 
                         {/* Sekmeler */}
                         <div className="border-b border-gray-700 pb-4 mb-6">
-                        <div className="grid grid-cols-4 text-center">
-                                {Object.keys(skills).map((tab) => (
+                        <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-2">
+                            {Object.keys(skills).map((tab) => (
                                 <motion.button
                                 key={tab}
                                 onClick={() => setActiveTab(tab as SkillCategory)}

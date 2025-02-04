@@ -22,10 +22,10 @@ export default function HeroSection() {
   }, [])
 
   const navigationItems = [
-    { title: "Hakkımda", href: "/hakkimda", color: "from-blue-500 to-blue-600" },
-    { title: "Deneyimlerim", href: "/deneyimler", color: "from-emerald-500 to-emerald-600" },
-    { title: "Eğitimim", href: "/egitim", color: "from-orange-500 to-orange-600" },
-    { title: "Hobilerim", href: "/hobiler", color: "from-purple-500 to-purple-600" },
+    { title: "Hakkımda", href: "/hakkimda", color: "from-blue-700 to-blue-800" },
+    { title: "Deneyimlerim", href: "/deneyimler", color: "from-emerald-700 to-emerald-800" },
+    { title: "Eğitimim", href: "/egitim", color: "from-orange-700 to-orange-800" },
+    { title: "Hobilerim", href: "/hobiler", color: "from-purple-700 to-purple-800" },
   ]
 
   return (

@@ -10,7 +10,7 @@ export default function Egitim() {
             degree: "Bilgisayar Mühendisliği",
             school: "İstanbul Teknik Üniversitesi",
             period: "2020 - 2025",
-            description: "Yazılım geliştirme, algoritma analizi ve veri yapıları üzerine yoğunlaştım. Bilgisayar organizasyonu ve Mikroişlemciler alanındaki derslerde üstün başarı gösterdim",
+            description: "Yazılım geliştirme, algoritma analizi ve veri yapıları üzerine yoğunlaştım. Bilgisayar organizasyonu ve Mikroişlemciler alanındaki derslerde üstün başarı gösterdim.",
             achievements: ["Onur Öğrencisi [3.01 GPA]"],
         },
         {
