@@ -60,7 +60,7 @@ export default function HeroSection() {
             />
             <motion.div
               className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
