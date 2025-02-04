@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import Image from "next/image"
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react"
 import GradientHeading from "../components/GradientHeading"
 import Link from "next/link"
 import { useLocale } from "@/contexts/LocaleContext"
@@ -14,7 +14,7 @@ type SkillCategory = "software" | "technologies" | "documentation" | "social"
 const iconMap = {
     Github: <Github size={20} />,
     LinkedIn: <Linkedin size={20} />,
-    Instagram: <Twitter size={20} />,
+    Instagram: <Instagram size={20} />,
     Email: <Mail size={20} />
   } as const
 // Sosyal linkler için JSON tipini tanımlıyoruz
