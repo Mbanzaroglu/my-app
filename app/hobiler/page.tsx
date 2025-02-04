@@ -1,63 +1,58 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Camera, Dumbbell, Book, Globe, Gamepad } from "lucide-react";
-import { FaSwimmer, FaFistRaised } from "react-icons/fa"; // FontAwesome kullanımı
+import { Camera, Dumbbell, Book, Globe, Gamepad } from "lucide-react"
+import { FaSwimmer, FaFistRaised } from "react-icons/fa" // FontAwesome kullanımı
 import Image from "next/image"
 import GradientHeading from "../components/GradientHeading"
+import { useLocale } from "@/contexts/LocaleContext" // Locale Context
 
 export default function Hobiler() {
-    const hobbies = [
-        {
-          title: "Fotoğrafçılık",
-          icon: Camera,
-          description: "Sokak ve Portre Fotoğrafçılığı yaparak hikaye anlatıcılığı yapıyorum",
-          image: "/Fotoğrafçılık.webp",
-        },
-        {
-          title: "Fitness & Gym",
-          icon: Dumbbell,
-          description: "2+ yıldır düzenli olarak orta tempo vücut geliştirme yapıyorum.",
-          image: "/Gym.webp",
-        },
-        {
-          title: "Kick Boks",
-          icon: FaFistRaised,
-          description: "2 yıllık orta-segment kick boks eğitimi aldım. Öğrenci kulüplerinde eğitmenlik yaptım.",
-          image: "/Kick-boks.webp",
-        },
-        {
-          title: "Kitap Okuma",
-          icon: Book,
-          description: "Teknik, Türk Romanı ve Deneme türlerindeki kitapları okurum.",
-          image: "/Kitap.webp",
-        },
-        {
-          title: "Yüzme",
-          icon: FaSwimmer,
-          description: "Belirli periyotlarda bir kardiyo olarak serbest stil yüzüyorum.",
-          image: "/Swimming.webp",
-        },
-        {
-          title: "Seyahat",
-          icon: Globe,
-          description: "Yeni yerleri farklı gruptan insanlarla, bazen tek başıma keşfederim ve eşsiz spotları bulmaya çalışırım.",
-          image: "/Traveling.webp",
-        },
-        {
-          title: "Video Oyunları",
-          icon: Gamepad,
-          description: "AOE2, CS:GO, LOL, L4D2 gibi hem fps hem de strateji oyunlarını vakit buldukça arkadaşlarımla beraber oynarım.",
-          image: "/Video-Games.webp",
-        },
-      ]
-      
+  const { t } = useLocale() // Dil değişkenlerini çekiyoruz
+
+  const hobbies = [
+    {
+      key: "photography",
+      icon: Camera,
+      image: "/Fotoğrafçılık.webp",
+    },
+    {
+      key: "fitness",
+      icon: Dumbbell,
+      image: "/Gym.webp",
+    },
+    {
+      key: "kickboxing",
+      icon: FaFistRaised,
+      image: "/Kick-boks.webp",
+    },
+    {
+      key: "reading",
+      icon: Book,
+      image: "/Kitap.webp",
+    },
+    {
+      key: "swimming",
+      icon: FaSwimmer,
+      image: "/Swimming.webp",
+    },
+    {
+      key: "traveling",
+      icon: Globe,
+      image: "/Traveling.webp",
+    },
+    {
+      key: "videogames",
+      icon: Gamepad,
+      image: "/Video-Games.webp",
+    },
+  ]
 
   return (
-<div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
+      <div className="max-w-4xl mx-auto px-4 py-12">
         <GradientHeading className="text-3xl md:text-4xl font-bold mb-4 text-left">
-                        Hobiler
+          {t("hobbies.hobbies")}
         </GradientHeading>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,7 +67,7 @@ export default function Hobiler() {
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={hobby.image || "/placeholder.svg"}
-                  alt={hobby.title}
+                  alt={t(`hobbies.${hobby.key}.title`)}
                   layout="fill"
                   objectFit="cover"
                   className="group-hover:scale-110 transition-transform duration-300"
@@ -85,9 +80,11 @@ export default function Hobiler() {
                   <div className="p-2 rounded-lg bg-blue-500/10">
                     <hobby.icon className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h2 className="text-xl font-semibold text-white">{hobby.title}</h2>
+                  <h2 className="text-xl font-semibold text-white">
+                    {t(`hobbies.${hobby.key}.title`)}
+                  </h2>
                 </div>
-                <p className="text-gray-300">{hobby.description}</p>
+                <p className="text-gray-300">{t(`hobbies.${hobby.key}.description`)}</p>
               </div>
             </motion.div>
           ))}
@@ -96,4 +93,3 @@ export default function Hobiler() {
     </div>
   )
 }
-

@@ -1,7 +1,7 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import Navbar from "./components/navbar"
-import type React from "react"
+import { LocaleProvider } from "@/contexts/LocaleContext"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -10,18 +10,15 @@ export const metadata = {
   description: "Muhammet Banzaroğlu'nun kişisel web sitesi",
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr" className="scroll-smooth">
       <body className={`${inter.className} bg-gray-900 text-white`}>
-        <Navbar />
-        {children}
+        <LocaleProvider>
+          <Navbar />
+          {children}
+        </LocaleProvider>
       </body>
     </html>
   )
 }
-

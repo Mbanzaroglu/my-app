@@ -5,9 +5,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react"
+import { useLocale } from "@/contexts/LocaleContext" // Locale desteğini ekledik
 
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const { t } = useLocale() // JSON'daki metinleri almak için
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -22,10 +24,10 @@ export default function HeroSection() {
   }, [])
 
   const navigationItems = [
-    { title: "Hakkımda", href: "/hakkimda", color: "from-blue-700 to-blue-800" },
-    { title: "Deneyimlerim", href: "/deneyimler", color: "from-emerald-700 to-emerald-800" },
-    { title: "Eğitimim", href: "/egitim", color: "from-orange-700 to-orange-800" },
-    { title: "Hobilerim", href: "/hobiler", color: "from-purple-700 to-purple-800" },
+    { title: t("navbar.about"), href: "/hakkimda", color: "from-blue-700 to-blue-800" },
+    { title: t("navbar.experience"), href: "/deneyimler", color: "from-emerald-700 to-emerald-800" },
+    { title: t("navbar.education"), href: "/egitim", color: "from-orange-700 to-orange-800" },
+    { title: t("navbar.hobbies"), href: "/hobiler", color: "from-purple-700 to-purple-800" },
   ]
 
   return (
@@ -77,7 +79,7 @@ export default function HeroSection() {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
           >
-            Hoş Geldiniz!
+            {t("home.welcome")}
           </motion.h1>
 
           <motion.p
@@ -86,7 +88,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3 }}
             className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12"
           >
-            {"Merhaba, ben Muhammet Banzaroğlu. Bu web sitesinde kendimden ve tecrübelerimden bahsediyor olacağım..".split("").map((char, index) => (
+            {t("home.description").split("").map((char: string, index: number) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 0, x: -20 }}

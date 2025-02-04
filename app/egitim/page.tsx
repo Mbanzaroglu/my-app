@@ -3,34 +3,20 @@
 import { motion } from "framer-motion"
 import { GraduationCap, Calendar, Award } from "lucide-react"
 import GradientHeading from "../components/GradientHeading"
+import { useLocale } from "@/contexts/LocaleContext"
 
 export default function Egitim() {
-    const education = [
-        {
-            degree: "Bilgisayar Mühendisliği",
-            school: "İstanbul Teknik Üniversitesi",
-            period: "2020 - 2025",
-            description: "Yazılım geliştirme, algoritma analizi ve veri yapıları üzerine yoğunlaştım. Bilgisayar organizasyonu ve Mikroişlemciler alanındaki derslerde üstün başarı gösterdim.",
-            achievements: ["Onur Öğrencisi [3.01 GPA]"],
-        },
-        {
-            degree: "Değişim Öğrencisi",
-            school: "West Attica Üniversitesi - Yunanistan",
-            period: "2023 Ocak - 2023 Temmuz",
-            description: "35 AKTS kredilik dönemde, Yunan kültürü ve dilini öğrenme fırsatı buldum. Aynı zamanda 10'dan fazla ülkeyi uluslararası öğrenci topluluğu ile ziyaret ettim.",
-            achievements: ["En İyi Kısa Film Ödülü"],
-        },
-    ]
+    const { t } = useLocale() // JSON'dan çeviri verilerini alıyoruz
 
     return (
         <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
             <div className="max-w-4xl mx-auto px-4 py-12">
                 <GradientHeading className="text-3xl md:text-4xl font-bold mb-4 text-left">
-                    Eğitim
+                    {t("education.education")}
                 </GradientHeading>
 
                 <div className="space-y-8">
-                    {education.map((edu, index) => (
+                    {t("education.degrees").map((edu: any, index: number) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
@@ -72,10 +58,10 @@ export default function Egitim() {
                                         >
                                             <h3 className="text-sm font-bold text-gray-200 mb-2 flex items-center gap-2">
                                                 <Award size={16} />
-                                                Başarılar
+                                                {t("education.achievements")}
                                             </h3>
                                             <motion.ul className="list-disc list-inside text-gray-300 space-y-1">
-                                                {edu.achievements.map((achievement, i) => (
+                                                {edu.achievements.map((achievement: string, i: number) => (
                                                     <motion.li
                                                         key={i}
                                                         variants={{

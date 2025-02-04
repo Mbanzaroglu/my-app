@@ -1,0 +1,153 @@
+{
+    "home": {
+    "welcome": "Hoş Geldiniz!", 
+    "description": "Merhaba, Ben Muhammet Banzaroğlu, bu websitesinde kendimden ve tecrübelerimden bahsediyor olacağım..."
+    },
+    "contact": {
+            "contact": "İletişim",
+            "contact_info": "İletişim Bilgileri",
+            "email": "E-posta",
+            "phone": "Telefon",
+            "location": "Konum",
+            "name": "İsim",
+            "message": "Mesaj",
+            "send": "Gönder",
+            "email_address": "muhammettbanzaroglu@gmail.com",
+            "phone_number": "+90 534 411 00 61",
+            "location_address": "İstanbul, Türkiye"
+    },
+    "navbar" :{
+        "home": "Ana Sayfa",
+        "about": "Hakkımda",
+        "experience": "Deneyimler",
+        "education": "Eğitim",
+        "hobbies": "Hobiler",
+        "contact": "İletişim"
+    },
+    "hobbies" :{
+        "hobbies": "Hobiler",
+        "photography": {
+          "title": "Fotoğrafçılık",
+          "description": "Sokak ve Portre Fotoğrafçılığı yaparak hikaye anlatıcılığı yapıyorum"
+        },
+        "fitness": {
+          "title": "Fitness & Gym",
+          "description": "2+ yıldır düzenli olarak orta tempo vücut geliştirme yapıyorum."
+        },
+        "kickboxing": {
+          "title": "Kick Boks",
+          "description": "2 yıllık orta-segment kick boks eğitimi aldım. Öğrenci kulüplerinde eğitmenlik yaptım."
+        },
+        "reading": {
+          "title": "Kitap Okuma",
+          "description": "Teknik, Türk Romanı ve Deneme türlerindeki kitapları okurum."
+        },
+        "swimming": {
+          "title": "Yüzme",
+          "description": "Belirli periyotlarda bir kardiyo olarak serbest stil yüzüyorum."
+        },
+        "traveling": {
+          "title": "Seyahat",
+          "description": "Yeni yerleri farklı gruptan insanlarla, bazen tek başıma keşfederim ve eşsiz spotları bulmaya çalışırım."
+        },
+        "videogames": {
+          "title": "Video Oyunları",
+          "description": "AOE2, CS:GO, LOL, L4D2 gibi hem fps hem de strateji oyunlarını vakit buldukça arkadaşlarımla beraber oynarım."
+        }
+      },
+        "about-me": {
+          "about": "Hakkımda",
+          "introduction": "Merhaba, Ben Muhammet Banzaroğlu, İstanbul Teknik Üniversitesi'nde Bilgisayar Mühendisliği son sınıf öğrencisiyim. Yazılım geliştirme, algoritmalar ve veri yapıları konularına büyük ilgi duyuyorum. Şu anda Ziraat Teknoloji'de part-time Full Stack Developer olarak çalışıyorum ve hem .NET backend hem de React frontend geliştirme üzerine yoğunlaşıyorum.",
+          "ituoder": {
+            "before": "Bunun yanı sıra, ",
+            "link_text": "itüöder",
+            "href": "https://www.ituogrenci.org.tr/",
+            "after": " Yönetim Kurulu Üyesi olarak, İTÜ öğrencileri ve mezunlarına yönelik projeler geliştiriyor, topluluk çalışmalarında aktif rol alıyorum. Sürekli öğrenmeyi, yeni teknolojileri efektif şekilde kullanmanın yollarını keşfetmeyi ve bunları projelerimde uygulamayı seviyorum."
+          },
+          "profile_image_alt": "Profil Fotoğrafı",
+          "skills": "Yeteneklerim",
+          "software": "Yazılım",
+          "technologies": "Teknolojiler",
+          "documentation": "Dokümantasyon",
+          "social": "Sosyal",
+          "skills_list": {
+            "software": ["React", "Next.js", "TypeScript", "Node.js", "Angular", ".NET", "C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "NoSQL"],
+            "technologies": ["Tailwind CSS", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Trello", "Slack", "Visual Studio Code", "WebStorm", "PyCharm", "IntelliJ IDEA"],
+            "documentation": ["Medium", "Notion", "Jira", "LaTeX", "JSON", "Canva", "Google Documents", "Google Sheets", "Microsoft Office"],
+            "social": ["Takım Çalışması", "İletişim", "Problem Çözme", "Kriz Yönetimi", "Zaman Yönetimi", "Öğrenme Yetisi", "Topluluk Yönetimi", "Mentorluk", "Teknik Liderlik", "Dokümantasyon", "Disiplin"]
+          },
+          "links": {
+            "github": { "label": "GitHub", "href": "https://github.com/Mbanzaroglu", "icon": "Github" },
+            "linkedin": { "label": "LinkedIn", "href": "https://www.linkedin.com/in/muhammet-banzaroglu/", "icon": "LinkedIn" },
+            "instagram": { "label": "Instagram", "href": "https://www.instagram.com/muhammetbanzaroglu/", "icon": "Instagram" },
+            "email": { "label": "E-posta", "href": "mailto:muhammettbanzaroglu@gmail.com", "icon": "Email" }
+          }
+        },    
+    "education":{
+        "education": "Eğitim",
+        "degrees": [
+          {
+            "degree": "Bilgisayar Mühendisliği",
+            "school": "İstanbul Teknik Üniversitesi",
+            "period": "2020 - 2025",
+            "description": "Yazılım geliştirme, algoritma analizi ve veri yapıları üzerine yoğunlaştım. Bilgisayar organizasyonu ve Mikroişlemciler alanındaki derslerde üstün başarı gösterdim.",
+            "achievements": ["Onur Öğrencisi [3.01 GPA]"]
+          },
+          {
+            "degree": "Değişim Öğrencisi",
+            "school": "West Attica Üniversitesi - Yunanistan",
+            "period": "2023 Ocak - 2023 Temmuz",
+            "description": "35 AKTS kredilik dönemde, Yunan kültürü ve dilini öğrenme fırsatı buldum. Aynı zamanda 10'dan fazla ülkeyi uluslararası öğrenci topluluğu ile ziyaret ettim.",
+            "achievements": ["En İyi Kısa Film Ödülü"]
+          }
+        ],
+        "achievements": "Başarılar"
+      },
+      "experiences": {
+        "experiences": "Deneyimler",
+        "experience_list": [
+          {
+            "title": "Full Stack Yazılım Geliştirici",
+            "company": "Ziraat Teknoloji",
+            "period": "2024 Eylül - Günümüz",
+            "description": "Bankaya web tabanlı uygulamalar geliştirme ve bakım.",
+            "technologies": ["React", "Node.js", ".NET", "Git", "MySQL", "IntelliJ IDE", "Visual Studio Code"]
+          },
+          {
+            "title": "Yönetim Kurulu Üyesi - Otomasyon Yöneticisi",
+            "company": "itüöder (İTÜ Öğrencileri Derneği)",
+            "period": "2024 Mart - Günümüz",
+            "description": "İTÜ öğrencileri ve mezunları için sosyal, kültürel, psikolojik ve mesleki alanlarda hizmetler sunan derneğin yönetim kurulu üyeliği ve kullanılan sistemlerin otomasyon süreçlerinin yönetimi, yapay zeka modeli eğitimi.",
+            "technologies": ["AppScript", "Google Sheets", "Python", "Ekip Yönetimi", "İnsan Etkileşimi", "Kurumsal İletişim", "Canva", "GPT Model Eğitimi"]
+          },
+          {
+            "title": "ABAP Geliştirme Stajyeri",
+            "company": "NTT Data Bussines Solutions",
+            "period": "2024 Temmuz - 2024 Eylül",
+            "description": "SAP sistemler için ABAP programlama dili ile geliştirme ve algoritma dizaynı.",
+            "technologies": ["ABAP", "Open SQL", "Notion", "Jira", "SAP"]
+          },
+          {
+            "title": "Yazılım Stajyeri",
+            "company": "Senktron Software",
+            "period": "2023 Ocak - 2023 Mart",
+            "description": "Stajyer projesi kapsamında canlı açık artırma sitesinin Full Stack tasarımı ve implementasyonu.",
+            "technologies": ["Angular", "PostgreSQL", "Python", "Notion", "Vscode"]
+          },
+          {
+            "title": "Yazılım Stajyeri",
+            "company": "Garanti Technology",
+            "period": "2021 Haziran - 2021 Eylül",
+            "description": "Veri tabanı ve web tabanlı uygulamaların takibi ve süreç iyileştirmesi. Dokümantasyon hazırlama ve test süreçlerine katılım.",
+            "technologies": ["SQL", "Microsoft Excel", "Jenkins", "Vscode"]
+          },
+          {
+            "title": "İnsan Kaynakları Asistanı",
+            "company": "Öğrenci Kariyeri",
+            "period": "2020 Eylül - 2021 Haziran",
+            "description": "YEA mezunları olarak markanın işe alım süreçlerine dair eğitim ve sonrasında mülakat yürütme sürecinde aktif görev alma.",
+            "technologies": ["Microsoft Teams", "Microsoft Power Point", "Notion", "Google Sheets"]
+          }
+        ]
+      }
+}

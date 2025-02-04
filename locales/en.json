@@ -1,0 +1,155 @@
+{
+    "home": {
+    "welcome": "Welcome!",
+    "description": "Hello, I am Muhammet Banzaroğlu. On this website, I will be talking about myself and my experiences..."
+  },
+    "contact": {
+      "contact": "Contact",
+      "contact_info": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "name": "Name",
+      "message": "Message",
+      "send": "Send",
+      "email_address": "muhammettbanzaroglu@gmail.com",
+      "phone_number": "+90 534 411 00 61",
+      "location_address": "Istanbul, Turkey"
+    },
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "education": "Education",
+      "hobbies": "Hobbies",
+      "contact": "Contact"
+    },
+    "hobbies": {
+      "hobbies": "Hobbies",
+      "photography": {
+        "title": "Photography",
+        "description": "I enjoy storytelling through street and portrait photography."
+      },
+      "fitness": {
+        "title": "Fitness & Gym",
+        "description": "I've been doing moderate-intensity bodybuilding regularly for over 2 years."
+      },
+      "kickboxing": {
+        "title": "Kickboxing",
+        "description": "I trained in mid-level kickboxing for 2 years and even coached student clubs."
+      },
+      "reading": {
+        "title": "Reading",
+        "description": "I enjoy reading technical books, Turkish novels, and essays."
+      },
+      "swimming": {
+        "title": "Swimming",
+        "description": "I swim freestyle as a cardio workout at regular intervals."
+      },
+      "traveling": {
+        "title": "Traveling",
+        "description": "I love exploring new places—sometimes solo, sometimes with different groups—always looking for hidden gems."
+      },
+      "videogames": {
+        "title": "Video Games",
+        "description": "I play a mix of FPS and strategy games like AOE2, CS:GO, LoL, and L4D2 with my friends whenever I find time."
+      }
+    },
+        "about-me": {
+          "about": "About Me",
+          "introduction": "Hello, I am Muhammet Banzaroğlu, a final-year Computer Engineering student at Istanbul Technical University. I have a great interest in software development, algorithms, and data structures. Currently, I work as a part-time Full Stack Developer at Ziraat Teknoloji, focusing on .NET backend and React frontend development.",
+          "ituoder": {
+            "before": "Additionally, as a member of the ",
+            "link_text": "itüöder ",
+            "href": "https://www.ituogrenci.org.tr/",
+            "after": "Board of Directors, I develop projects for ITU students and alumni and actively participate in community work. I enjoy continuously learning, discovering ways to effectively use new technologies, and implementing them in my projects."
+          },
+          "profile_image_alt": "Profile Photo",
+          "skills": "My Skills",
+          "software": "Software",
+          "technologies": "Technologies",
+          "documentation": "Documentation",
+          "social": "Social",
+          "skills_list": {
+            "software": ["React", "Next.js", "TypeScript", "Node.js", "Angular", ".NET", "C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "NoSQL"],
+            "technologies": ["Tailwind CSS", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Trello", "Slack", "Visual Studio Code", "WebStorm", "PyCharm", "IntelliJ IDEA"],
+            "documentation": ["Medium", "Notion", "Jira", "LaTeX", "JSON", "Canva", "Google Documents", "Google Sheets", "Microsoft Office"],
+            "social": ["Teamwork", "Communication", "Problem Solving", "Crisis Management", "Time Management", "Learning Ability", "Community Management", "Mentorship", "Technical Leadership", "Documentation", "Discipline"]
+          },
+          "links": {
+            "github": { "label": "GitHub", "href": "https://github.com/Mbanzaroglu", "icon": "Github" },
+            "linkedin": { "label": "LinkedIn", "href": "https://www.linkedin.com/in/muhammet-banzaroglu/", "icon": "LinkedIn" },
+            "instagram": { "label": "Instagram", "href": "https://www.instagram.com/muhammetbanzaroglu/", "icon": "Instagram" },
+            "email": { "label": "Email", "href": "mailto:muhammettbanzaroglu@gmail.com", "icon": "Email" }
+          }
+        },
+      
+    "education": {
+      "education": "Education",
+      "degrees": [
+        {
+          "degree": "Computer Engineering",
+          "school": "Istanbul Technical University",
+          "period": "2020 - 2025",
+          "description": "I specialized in software development, algorithm analysis, and data structures. I excelled in courses related to computer organization and microprocessors.",
+          "achievements": ["Honor Student [3.01 GPA]"]
+        },
+        {
+          "degree": "Exchange Student",
+          "school": "University of West Attica - Greece",
+          "period": "January 2023 - July 2023",
+          "description": "During this 35 ECTS credit semester, I had the chance to immerse myself in Greek culture and language. I also traveled to over 10 countries with an international student community.",
+          "achievements": ["Best Short Film Award"]
+        }
+      ],
+      "achievements": "Achievements"
+    },
+    "experiences": {
+      "experiences": "Experience",
+      "experience_list": [
+        {
+          "title": "Full Stack Software Developer",
+          "company": "Ziraat Technology",
+          "period": "September 2024 - Present",
+          "description": "Developing and maintaining web-based applications for banking operations.",
+          "technologies": ["React", "Node.js", ".NET", "Git", "MySQL", "IntelliJ IDE", "Visual Studio Code"]
+        },
+        {
+          "title": "Board Member - Automation Manager",
+          "company": "itüöder (ITU Students' Association)",
+          "period": "March 2024 - Present",
+          "description": "Serving as a board member in an association that provides social, cultural, psychological, and professional services for ITU students and alumni. Managing automation systems, training AI models.",
+          "technologies": ["AppScript", "Google Sheets", "Python", "Team Management", "Human Interaction", "Corporate Communication", "Canva", "GPT Model Training"]
+        },
+        {
+          "title": "ABAP Development Intern",
+          "company": "NTT Data Business Solutions",
+          "period": "July 2024 - September 2024",
+          "description": "Developing and designing algorithms using ABAP for SAP systems.",
+          "technologies": ["ABAP", "Open SQL", "Notion", "Jira", "SAP"]
+        },
+        {
+          "title": "Software Intern",
+          "company": "Senktron Software",
+          "period": "January 2023 - March 2023",
+          "description": "Designed and implemented a full-stack live auction website as part of an internship project.",
+          "technologies": ["Angular", "PostgreSQL", "Python", "Notion", "Vscode"]
+        },
+        {
+          "title": "Software Intern",
+          "company": "Garanti Technology",
+          "period": "June 2021 - September 2021",
+          "description": "Maintaining database and web-based applications, improving workflows, preparing documentation, and participating in testing processes.",
+          "technologies": ["SQL", "Microsoft Excel", "Jenkins", "Vscode"]
+        },
+        {
+          "title": "Human Resources Assistant",
+          "company": "Öğrenci Kariyeri (Student Career)",
+          "period": "September 2020 - June 2021",
+          "description": "As a YEA graduate, I received recruitment training and actively participated in conducting interviews for the organization.",
+          "technologies": ["Microsoft Teams", "Microsoft PowerPoint", "Notion", "Google Sheets"]
+        }
+      ]
+    }
+  }
+  

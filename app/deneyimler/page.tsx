@@ -3,62 +3,20 @@
 import { motion } from "framer-motion"
 import { Briefcase, Calendar } from "lucide-react"
 import GradientHeading from "../components/GradientHeading"
+import { useLocale } from "@/contexts/LocaleContext"
 
 export default function Deneyimler() {
-  const experiences = [
-    {
-      title: "Full Stack Yazılım Geliştirici",
-      company: "Ziraat Teknoloji",
-      period: "2024 Eylül - Günümüz",
-      description: "Bankaya web tabanlı uygulamalar geliştirme ve bakım.",
-      technologies: ["React", "Node.js", ".NET", "Git", "MySQL", "Intellij IDE", "Visual Studio Code"],
-    },
-    {
-        title: "Yönetim Kurulu Üyesi - Otomasyon Yöneticisi",
-        company: "itüöder (İTÜ Öğrencileri Derneği)",
-        period: "2024 Mart - Günümüz",
-        description: "İTÜ öğrencileri ve mezunları için sosyal, kültürel, psikolojik ve mesleki alanlarda hizmetler sunan derneğin yönetim kurulu üyeliği ve kullanılan sistemlerin otomasyon süreçlerinin yönetimi, yapay zeka modeli eğitimi.",
-        technologies: ["AppScript", "Google Sheets", "Python", "Ekip Yönetimi", "İnsan Etkileşimi", "Kurumsal İletişim", "Canva", "GPT Model Eğitimi"],
-      },
-    {
-      title: "ABAP Geliştirme Stajyeri",
-      company: "NTT Data Bussines Solutions",
-      period: "2024 Temmuz - 2024 Eylül",
-      description: "SAP sistemler için ABAP programlama dili ile geliştirme ve algoritma dizaynı.",
-      technologies: ["ABAP", "Open SQL", "Notion", "Jira", "SAP"],
-    },
-    {
-        title: "Yazılım Stajyeri",
-        company: "Senktron Software",
-        period: "2023 Ocak - 2023 Mart",
-        description: "Stajyer projesi kapsamında canlı açık artırma sitesinin Full Stack tasarımı ve implementasyonu.",
-        technologies: ["Angular", "PostgreSQL", "Python", "Notion", "Vscode"],
-      },
-      {
-        title: "Yazılım Stajyeri",
-        company: "Garanti Technology",
-        period: "2021 Haziran - 2021 Eylül",
-        description: "Veri tabanı ve web tabanlı uygulamaların takibi ve süreç iyileştirmesi. Dokümantasyon hazırlama ve test süreçlerine katılım.",
-        technologies: ["SQL", "Microsoft Excel", "Jenkins", "Vscode"],
-      },
-      {
-        title: "İnsan Kaynakları Asistanı",
-        company: "Öğrenci Kariyeri",
-        period: "2020 Eylül - 2021 Haziran",
-        description: "YEA mezunları olarak markanın işe alım süreçlerine dair eğitim ve sonrasında mülakat yürütme sürecinde aktif görev alma.",
-        technologies: ["Microsoft Teams", "Microsoft Power Point", "Notion", "Google Sheets"],
-      },
-  ]
+  const { t } = useLocale() // JSON'dan çeviri verilerini alıyoruz
 
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <GradientHeading className="text-3xl md:text-4xl font-bold mb-4 text-left">
-          Deneyimler
+          {t("experiences.experiences")}
         </GradientHeading>
 
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
+          {t("experiences.experience_list").map((exp: any, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
@@ -99,7 +57,7 @@ export default function Deneyimler() {
                   }
                 }}
               >
-                {exp.technologies.map((tech) => (
+                {exp.technologies.map((tech: string) => (
                   <motion.span
                     key={tech}
                     variants={{
