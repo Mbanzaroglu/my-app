@@ -70,7 +70,7 @@ export default function Hakkimda() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Image
-                    src="/me.JPG"
+                    src="/me6.jpeg"
                     alt={t("about-me.profile_image_alt")}
                     layout="fill"
                     objectFit="cover"

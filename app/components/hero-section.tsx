@@ -64,7 +64,7 @@ export default function HeroSection() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/me.JPG"
+                src="/me4.jpeg"
                 alt="Profil Fotoğrafı"
                 layout="fill"
                 objectFit="cover"
