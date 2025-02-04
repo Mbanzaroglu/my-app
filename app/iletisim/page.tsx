@@ -114,7 +114,7 @@ export default function Iletisim() {
 }
 
 // ✅ **Bileşenler: Daha Temiz Kod İçin Yardımcı Fonksiyonlar**
-function ContactInfo({ icon: Icon, label, value }: { icon: any; label: string; value: string }) {
+function ContactInfo({ icon: Icon, label, value }: { icon: React.ElementType; label: string; value: string }) {
   return (
     <div className="flex items-center gap-3">
       <div className="p-2 rounded-lg bg-blue-500/10">
