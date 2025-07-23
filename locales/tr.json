@@ -74,7 +74,7 @@
           "social": "Sosyal",
           "skills_list": {
             "software": ["React", "Next.js", "TypeScript", "Node.js", "Angular", ".NET", "C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "NoSQL"],
-            "technologies": ["Tailwind CSS", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Trello", "Slack", "Visual Studio Code", "WebStorm", "PyCharm", "IntelliJ IDEA"],
+            "technologies": ["Tailwind CSS", "MUI Kütüphanesi", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Trello", "Slack", "Visual Studio Code", "WebStorm", "PyCharm", "IntelliJ IDEA"],
             "documentation": ["Medium", "Notion", "Jira", "LaTeX", "JSON", "Canva", "Google Documents", "Google Sheets", "Microsoft Office"],
             "social": ["Takım Çalışması", "İletişim", "Problem Çözme", "Kriz Yönetimi", "Zaman Yönetimi", "Öğrenme Yetisi", "Topluluk Yönetimi", "Mentorluk", "Teknik Liderlik", "Dokümantasyon", "Disiplin"]
           },
