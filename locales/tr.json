@@ -113,7 +113,7 @@
             "company": "Delege AI",
             "period": "2025 Haziran - Günümüz",
             "description": "Delege AI adlı web uygulamasının geliştirilmesi ve bakımı. Yeni UI tasarımları çerçevesinde sitenin hem codebase tarafının refactor edilmesi hem de yeni özelliklerin eklenmesi.",
-            "technologies": ["React", "TypeScript", "Tailwind CSS", "Next.js", "Tailwind CSS", "Git", "MUI Library", "Figma", "REST API"]
+            "technologies": ["React", "Tailwind CSS", "Next.js", "Git", "MUI Library", "Figma", "REST API"]
           },
           {
             "title": "Full Stack Yazılım Geliştirici",

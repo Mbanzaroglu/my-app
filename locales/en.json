@@ -114,7 +114,7 @@
           "company": "Delege AI", 
           "period": "June 2025 - Present",
           "description": "Development and maintenance of the Delege AI web application. Refactoring the codebase and adding new features within the framework of new UI designs.",
-          "technologies": ["React", "TypeScript", "Tailwind CSS", "Next.js", "Tailwind CSS", "Git", "MUI Library", "Figma", "REST API"]
+          "technologies": ["React", "Tailwind CSS", "Next.js", "Git", "MUI Library", "Figma", "REST API"]
         },
         {
           "title": "Full Stack Software Developer",
