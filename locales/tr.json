@@ -109,9 +109,16 @@
         "experiences": "Deneyimler",
         "experience_list": [
           {
+            "title": "Frontend Developer",
+            "company": "Delege AI",
+            "period": "2025 Haziran - Günümüz",
+            "description": "Delege AI adlı web uygulamasının geliştirilmesi ve bakımı. Yeni UI tasarımları çerçevesinde sitenin hem codebase tarafının refactor edilmesi hem de yeni özelliklerin eklenmesi.",
+            "technologies": ["React", "TypeScript", "Tailwind CSS", "Next.js", "Tailwind CSS", "Git", "MUI Library", "Figma", "REST API"]
+          },
+          {
             "title": "Full Stack Yazılım Geliştirici",
             "company": "Ziraat Teknoloji",
-            "period": "2024 Eylül - Günümüz",
+            "period": "2024 Eylül - 2025 Haziran",
             "description": "Bankaya web tabanlı uygulamalar geliştirme ve bakım.",
             "technologies": ["React", "Node.js", ".NET", "Git", "MySQL", "IntelliJ IDE", "Visual Studio Code"]
           },
