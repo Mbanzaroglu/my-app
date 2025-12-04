@@ -59,7 +59,7 @@
       },
         "about-me": {
           "about": "Hakkımda",
-          "introduction": "Merhaba, Ben Muhammet Banzaroğlu, İstanbul Teknik Üniversitesi'nde Bilgisayar Mühendisliği son sınıf öğrencisiyim. Yazılım geliştirme, algoritmalar ve veri yapıları konularına büyük ilgi duyuyorum. Şu anda Ziraat Teknoloji'de part-time Full Stack Developer olarak çalışıyorum ve hem .NET backend hem de React frontend geliştirme üzerine yoğunlaşıyorum.",
+          "introduction": "Merhaba, ben Muhammet Banzaroğlu. İstanbul Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum. Yazılım geliştirme, algoritmalar ve veri yapıları konularına büyük ilgi duyuyorum. Şu anda Delege AI'da Frontend Developer olarak aktif çalışıyorum. React, Tailwind, shadcn/ui, NextAuth, React Query, Zod ve Zustand gibi modern teknolojilerle component-based, best practice React uygulamaları geliştiriyorum.",
           "ituoder": {
             "before": "Bunun yanı sıra, ",
             "link_text": "itüöder",
@@ -74,7 +74,7 @@
           "social": "Sosyal",
           "skills_list": {
             "software": ["React", "Next.js", "TypeScript", "Node.js", "Angular", ".NET", "C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "NoSQL"],
-            "technologies": ["Tailwind CSS", "MUI Kütüphanesi", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Trello", "Slack", "Visual Studio Code", "WebStorm", "PyCharm", "IntelliJ IDEA"],
+            "technologies": ["Tailwind CSS", "shadcn/ui", "React Query", "Zustand", "Zod", "NextAuth", "MUI", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Figma"],
             "documentation": ["Medium", "Notion", "Jira", "LaTeX", "JSON", "Canva", "Google Documents", "Google Sheets", "Microsoft Office"],
             "social": ["Takım Çalışması", "İletişim", "Problem Çözme", "Kriz Yönetimi", "Zaman Yönetimi", "Öğrenme Yetisi", "Topluluk Yönetimi", "Mentorluk", "Teknik Liderlik", "Dokümantasyon", "Disiplin"]
           },
@@ -112,14 +112,21 @@
             "title": "Frontend Developer",
             "company": "Delege AI",
             "period": "2025 Haziran - Günümüz",
-            "description": "Delege AI adlı web uygulamasının geliştirilmesi ve bakımı. Yeni UI tasarımları çerçevesinde sitenin hem codebase tarafının refactor edilmesi hem de yeni özelliklerin eklenmesi.",
-            "technologies": ["React", "Tailwind CSS", "Next.js", "Git", "MUI Library", "Figma", "REST API"]
+            "description": "Delege AI web uygulamasının frontend geliştirmesinde aktif olarak çalışıyorum. React, Tailwind, shadcn/ui, NextAuth, React Query, Zod ve Zustand kullanarak component-based, best practice React uygulamaları inşa ediyorum. Yeni UI tasarımları çerçevesinde hem codebase refactoring hem de yeni özellik geliştirme süreçlerini yürütüyorum.",
+            "technologies": ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "NextAuth", "React Query", "Zod", "Zustand", "TypeScript", "Figma", "REST API"]
+          },
+          {
+            "title": "Frontend Developer",
+            "company": "İşler Kitap Evi - UniKazan",
+            "period": "2025 Eylül - Günümüz",
+            "description": "UniKazan eğitim platformunun admin panel, web uygulaması ve kullanıcı paneli sayfalarının hem frontend geliştirmesini hem de UI/UX tasarım ve iyileştirme süreçlerini tek başıma yürütüyorum. React, Tailwind, shadcn/ui, React Query, Zod ve Zustand kullanarak component-based, best practice React uygulamaları geliştiriyorum.",
+            "technologies": ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "React Query", "Zod", "Zustand", "TypeScript", "Figma", "UI/UX Design"]
           },
           {
             "title": "Full Stack Yazılım Geliştirici",
             "company": "Ziraat Teknoloji",
             "period": "2024 Eylül - 2025 Haziran",
-            "description": "Bankaya web tabanlı uygulamalar geliştirme ve bakım.",
+            "description": "Bankaya web tabanlı uygulamalar geliştirme ve bakım. .NET backend ve React frontend teknolojileri ile kurumsal çözümler ürettim.",
             "technologies": ["React", "Node.js", ".NET", "Git", "MySQL", "IntelliJ IDE", "Visual Studio Code"]
           },
           {
@@ -131,7 +138,7 @@
           },
           {
             "title": "ABAP Geliştirme Stajyeri",
-            "company": "NTT Data Bussines Solutions",
+            "company": "NTT Data Business Solutions",
             "period": "2024 Temmuz - 2024 Eylül",
             "description": "SAP sistemler için ABAP programlama dili ile geliştirme ve algoritma dizaynı.",
             "technologies": ["ABAP", "Open SQL", "Notion", "Jira", "SAP"]

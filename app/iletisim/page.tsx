@@ -3,12 +3,36 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send, CheckCircle, XCircle, Loader2 } from "lucide-react"
 import { useState, useEffect } from "react"
-import GradientHeading from "../components/GradientHeading"
 import emailjs from "emailjs-com"
 import { useLocale } from "@/contexts/LocaleContext"
+import SectionHeader from "../components/SectionHeader"
+
+// Selçuklu Yıldızı Dekorasyon
+const SeljukStar = ({ size = 200, opacity = 0.05 }: { size?: number; opacity?: number }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 100 100"
+    style={{ opacity }}
+    className="text-altin"
+  >
+    <polygon 
+      points="50,5 61,35 95,35 68,57 79,90 50,70 21,90 32,57 5,35 39,35" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="0.5"
+    />
+    <polygon 
+      points="50,20 56,40 78,40 60,52 67,73 50,60 33,73 40,52 22,40 44,40" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="0.5"
+    />
+  </svg>
+)
 
 export default function Iletisim() {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
 
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +45,7 @@ export default function Iletisim() {
 
   useEffect(() => {
     if (status) {
-      const timer = setTimeout(() => setStatus(null), 3000) // 3 saniye sonra mesaj kaybolur
+      const timer = setTimeout(() => setStatus(null), 5000)
       return () => clearTimeout(timer)
     }
   }, [status])
@@ -52,114 +76,192 @@ export default function Iletisim() {
     })
   }
 
-  return (
-    <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-900 via-gray-700 to-gray-800">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <GradientHeading className="text-3xl md:text-4xl font-bold mb-4 text-left">
-          {t("contact.contact")}
-        </GradientHeading>
+  const contactInfo = [
+    { 
+      icon: Mail, 
+      label: t("contact.email"), 
+      value: t("contact.email_address"),
+      symbol: "◆"
+    },
+    { 
+      icon: Phone, 
+      label: t("contact.phone"), 
+      value: t("contact.phone_number"),
+      symbol: "◇"
+    },
+    { 
+      icon: MapPin, 
+      label: t("contact.location"), 
+      value: t("contact.location_address"),
+      symbol: "✦"
+    },
+  ]
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  return (
+    <div className="relative min-h-screen pt-24 pb-12">
+      {/* Arka plan deseni */}
+      <div className="fixed inset-0 geometric-pattern-bg opacity-50 pointer-events-none" />
+      
+      {/* Dekoratif yıldız */}
+      <div className="absolute right-10 top-40 pointer-events-none hidden lg:block">
+        <SeljukStar size={300} opacity={0.03} />
+      </div>
+      
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <SectionHeader number="01" title={t("contact.contact")} ornament="❋" />
+          
+          {/* Alt başlık */}
+          <p className="text-[var(--text-muted)] text-lg font-body italic mb-12">
+            {locale === "tr" ? "Yeni projelere her zaman açığım" : "I'm always open to new projects"}
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* İletişim Bilgileri */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
-            <h2 className="text-xl font-semibold mb-6">{t("contact.contact_info")}</h2>
-            <div className="space-y-4">
-              <ContactInfo icon={Mail} label={t("contact.email")} value={t("contact.email_address")} />
-              <ContactInfo icon={Phone} label={t("contact.phone")} value={t("contact.phone_number")} />
-              <ContactInfo icon={MapPin} label={t("contact.location")} value={t("contact.location_address")} />
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <h2 className="text-xl font-display font-normal tracking-wide mb-8">
+              {t("contact.contact_info")}
+            </h2>
+            
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <motion.div
+                  key={info.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  className="group flex items-center gap-4 p-4 border border-[var(--border-light)] hover:border-altin/30 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 flex items-center justify-center border border-turkuaz/30 dark:border-altin/30 group-hover:border-altin/50 transition-colors">
+                    <info.icon className="w-5 h-5 text-turkuaz dark:text-altin" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-sans tracking-wide text-[var(--text-muted)] mb-1">
+                      <span className="text-altin mr-2">{info.symbol}</span>
+                      {info.label}
+                    </p>
+                    <p className="font-body">{info.value}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
+
+            {/* Email CTA */}
+            <motion.a
+              href={`mailto:${t("contact.email_address")}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="group inline-flex items-center gap-3 mt-8 py-3 border-b border-altin/30 hover:border-altin transition-colors"
+            >
+              <span className="text-altin">✉</span>
+              <span className="font-sans tracking-wide">{t("contact.email_address")}</span>
+              <span className="text-altin group-hover:translate-x-1 transition-transform">→</span>
+            </motion.a>
           </motion.div>
 
           {/* İletişim Formu */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <TextInput label={t("contact.name")} id="name" value={formData.name} onChange={(val) => setFormData({ ...formData, name: val })} />
-              <TextInput label={t("contact.email")} id="email" type="email" value={formData.email} onChange={(val) => setFormData({ ...formData, email: val })} />
-              <TextArea label={t("contact.message")} id="message" value={formData.message} onChange={(val) => setFormData({ ...formData, message: val })} />
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* İsim */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-sans tracking-wide text-[var(--text-muted)] mb-2">
+                  <span className="text-turkuaz dark:text-altin mr-2">◆</span>
+                  {t("contact.name")}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 bg-transparent border border-[var(--border-light)] focus:border-altin outline-none transition-colors font-body"
+                  required
+                />
+              </div>
 
+              {/* Email */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-sans tracking-wide text-[var(--text-muted)] mb-2">
+                  <span className="text-turkuaz dark:text-altin mr-2">◇</span>
+                  {t("contact.email")}
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 bg-transparent border border-[var(--border-light)] focus:border-altin outline-none transition-colors font-body"
+                  required
+                />
+              </div>
+
+              {/* Mesaj */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-sans tracking-wide text-[var(--text-muted)] mb-2">
+                  <span className="text-turkuaz dark:text-altin mr-2">✦</span>
+                  {t("contact.message")}
+                </label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  rows={5}
+                  className="w-full px-4 py-3 bg-transparent border border-[var(--border-light)] focus:border-altin outline-none transition-colors font-body resize-none"
+                  required
+                />
+              </div>
+
+              {/* Gönder Butonu */}
               <button
                 type="submit"
-                className="relative w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 transition-colors"
                 disabled={loading}
+                className="group w-full px-6 py-4 border border-bordo hover:bg-bordo text-bordo hover:text-white dark:border-altin dark:text-altin dark:hover:bg-altin dark:hover:text-gece transition-all duration-300 flex items-center justify-center gap-3 font-sans tracking-wide disabled:opacity-50"
               >
-                {loading ? <Loader2 className="animate-spin w-5 h-5" /> : <Send size={20} />}
+                {loading ? (
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : (
+                  <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                )}
                 {t("contact.send")}
               </button>
             </form>
 
-            {/* Başarı veya Hata Mesajı */}
-            {/* Başarı veya Hata Mesajı */}
-              <AnimatePresence>
-                {status && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className={`mt-4 p-3 rounded-lg text-sm font-semibold flex items-center gap-2 shadow-lg ${
-                      status === "success"
-                        ? "bg-green-500/10 text-green-400 border border-green-500/20"
-                        : "bg-red-500/10 text-red-400 border border-red-500/20"
-                    }`}
-                  >
-                    {status === "success" ? <CheckCircle size={18} /> : <XCircle size={18} />}
+            {/* Durum Mesajı */}
+            <AnimatePresence>
+              {status && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className={`mt-6 p-4 border flex items-center gap-3 ${
+                    status === "success"
+                      ? "border-turkuaz/30 text-turkuaz bg-turkuaz/5"
+                      : "border-bordo/30 text-bordo bg-bordo/5"
+                  }`}
+                >
+                  {status === "success" ? <CheckCircle size={18} /> : <XCircle size={18} />}
+                  <span className="text-sm font-sans">
                     {status === "success" ? t("contact.success_message") : t("contact.error_message")}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </div>
       </div>
-    </div>
-  )
-}
-
-// ✅ **Bileşenler: Daha Temiz Kod İçin Yardımcı Fonksiyonlar**
-function ContactInfo({ icon: Icon, label, value }: { icon: React.ElementType; label: string; value: string }) {
-  return (
-    <div className="flex items-center gap-3">
-      <div className="p-2 rounded-lg bg-blue-500/10">
-        <Icon className="w-5 h-5 text-blue-400" />
-      </div>
-      <div>
-        <p className="text-sm text-gray-400">{label}</p>
-        <p className="text-white">{value}</p>
-      </div>
-    </div>
-  )
-}
-
-function TextInput({ label, id, value, onChange, type = "text" }: { label: string; id: string; value: string; onChange: (val: string) => void; type?: string }) {
-  return (
-    <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-400 mb-1">
-        {label}
-      </label>
-      <input
-        type={type}
-        id={id}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
-        required
-      />
-    </div>
-  )
-}
-
-function TextArea({ label, id, value, onChange }: { label: string; id: string; value: string; onChange: (val: string) => void }) {
-  return (
-    <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-400 mb-1">
-        {label}
-      </label>
-      <textarea
-        id={id}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        rows={4}
-        className="w-full px-4 py-2 rounded-lg bg-gray-800/50 border border-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
-        required
-      />
     </div>
   )
 }

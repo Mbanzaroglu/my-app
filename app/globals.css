@@ -1,42 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Spectral:wght@200;300;400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════════
+   TÜRK KÜLTÜRÜ TEMALI PORTFOLIO - CSS DEĞİŞKENLERİ
+   Ebru, Selçuklu Geometrisi, Çini Sanatı, Hat Dokunuşları
+   ═══════════════════════════════════════════════════════════ */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Türk Kültürü Renk Paleti - Light Mode */
+  --color-turkuaz: #1e5f74;        /* Çini Mavisi */
+  --color-altin: #c9a227;          /* Osmanlı Altını */
+  --color-bordo: #8b1538;          /* Lale Kırmızısı */
+  --color-krem: #faf8f5;           /* Kağıt Kremi */
+  --color-krem-koyu: #f5f0e8;      /* Koyu Krem */
+  --color-metin: #2a2a2a;          /* Ana Metin */
+  --color-metin-soluk: #5a5a5a;    /* Soluk Metin */
+  
+  /* Light Mode Arka Plan */
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f5f0e8;
+  --bg-tertiary: #f0ebe3;
+  
+  /* Light Mode Metin */
+  --text-primary: #2a2a2a;
+  --text-secondary: #5a5a5a;
+  --text-muted: rgba(42, 42, 42, 0.5);
+  
+  /* Light Mode Kenarlıklar */
+  --border-light: rgba(30, 95, 116, 0.1);
+  --border-accent: rgba(201, 162, 39, 0.3);
+  
+  /* Gölgeler */
+  --shadow-soft: 0 20px 60px rgba(30, 95, 116, 0.08);
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  /* Dark Mode Arka Plan */
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f1629;
+  
+  /* Dark Mode Metin */
+  --text-primary: #faf8f5;
+  --text-secondary: #b8b5af;
+  --text-muted: rgba(250, 248, 245, 0.5);
+  
+  /* Dark Mode Kenarlıklar */
+  --border-light: rgba(201, 162, 39, 0.15);
+  --border-accent: rgba(201, 162, 39, 0.3);
+  
+  /* Dark Mode Gölgeler */
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: 'Spectral', 'Playfair Display', Georgia, serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.3s ease;
 }
 
-@layer components {
-  .btn {
-    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+::selection {
+  background: rgba(30, 95, 116, 0.2);
+  color: var(--text-primary);
+}
+
+.dark ::selection {
+  background: rgba(201, 162, 39, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════════════════════ */
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Spectral', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CUSTOM CURSOR (Desktop Only)
+   ═══════════════════════════════════════════════════════════ */
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-none {
+    cursor: none;
   }
 }
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--color-bordo);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-altin);
+  pointer-events: none;
+  z-index: 9999;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   EBRU (MARBLING) BACKGROUND EFFECT
+   ═══════════════════════════════════════════════════════════ */
+
+.ebru-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.dark .ebru-background {
+  opacity: 0.4;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ÇİNİ BORDER PATTERN
+   ═══════════════════════════════════════════════════════════ */
+
+.cini-border-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 101;
+  overflow: hidden;
+  background: linear-gradient(90deg, 
+    var(--color-turkuaz) 0%, 
+    var(--color-altin) 50%, 
+    var(--color-bordo) 100%
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FLOATING GEOMETRIC ELEMENTS
+   ═══════════════════════════════════════════════════════════ */
+
+.floating-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-star {
+  position: absolute;
+  transition: transform 0.1s linear;
+  color: var(--color-turkuaz);
+}
+
+.dark .floating-star {
+  color: var(--color-altin);
+  opacity: 0.3;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+.section-ornament {
+  color: var(--color-altin);
+  font-size: 0.8rem;
+}
+
+.section-line {
+  flex: 1;
+  height: 10px;
+  opacity: 0.2;
+  color: var(--color-turkuaz);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SKILL BARS
+   ═══════════════════════════════════════════════════════════ */
+
+.skill-bar {
+  position: relative;
+  height: 3px;
+  background-color: var(--border-light);
+  overflow: hidden;
+}
+
+.skill-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-turkuaz), var(--color-altin));
+  transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-bar-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg, 
+    transparent, 
+    transparent 8px, 
+    rgba(255, 255, 255, 0.3) 8px, 
+    rgba(255, 255, 255, 0.3) 10px
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TIMELINE
+   ═══════════════════════════════════════════════════════════ */
+
+.timeline-line {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--color-altin), var(--color-turkuaz), transparent);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════ */
+
+@keyframes slideDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.gradient-text {
-  background-clip: text;
+@keyframes rotateGeometry {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 2s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotateGeometry 20s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Animation Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ═══════════════════════════════════════════════════════════
+   HOVER EFFECTS
+   ═══════════════════════════════════════════════════════════ */
+
+.hover-lift {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GRADIENT TEXT
+   ═══════════════════════════════════════════════════════════ */
+
+.gradient-text-turkish {
+  background: linear-gradient(135deg, var(--color-turkuaz), var(--color-altin));
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-outline {
   color: transparent;
-  background-image: linear-gradient(to right, #3b82f6, #9333ea);
-  background-size: 200% 200%;
-  background-position: 0% 50%;
-  animation: gradientShift 5s ease infinite;
+  -webkit-text-stroke: 1px var(--text-primary);
+}
+
+.dark .text-outline {
+  -webkit-text-stroke: 1px var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLLBAR STYLING
+   ═══════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-turkuaz), var(--color-altin));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-altin), var(--color-bordo));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE UTILITIES
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .custom-cursor,
+  .cursor-dot {
+    display: none;
+  }
+  
+  .floating-elements {
+    opacity: 0.5;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GEOMETRIC PATTERN BACKGROUND
+   ═══════════════════════════════════════════════════════════ */
+
+.geometric-pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%231e5f74' stroke-width='0.3' opacity='0.1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%231e5f74' stroke-width='0.2' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+.dark .geometric-pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23c9a227' stroke-width='0.3' opacity='0.1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%23c9a227' stroke-width='0.2' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GLASS MORPHISM
+   ═══════════════════════════════════════════════════════════ */
+
+.glass {
+  background: rgba(250, 248, 245, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass {
+  background: rgba(26, 26, 46, 0.8);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOCUS STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--color-altin);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LINK HOVER UNDERLINE
+   ═══════════════════════════════════════════════════════════ */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-altin), var(--color-turkuaz), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
 }

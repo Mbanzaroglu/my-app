@@ -59,7 +59,7 @@
     },
         "about-me": {
           "about": "About Me",
-          "introduction": "Hello, I am Muhammet Banzaroğlu, a final-year Computer Engineering student at Istanbul Technical University. I have a great interest in software development, algorithms, and data structures. Currently, I work as a part-time Full Stack Developer at Ziraat Teknoloji, focusing on .NET backend and React frontend development.",
+          "introduction": "Hello, I'm Muhammet Banzaroğlu. I'm a Computer Engineering graduate from Istanbul Technical University. I have a deep interest in software development, algorithms, and data structures. Currently, I'm actively working as a Frontend Developer at Delege AI, building component-based, best practice React applications using modern technologies like React, Tailwind, shadcn/ui, NextAuth, React Query, Zod, and Zustand.",
           "ituoder": {
             "before": "Additionally, as a member of the ",
             "link_text": "itüöder ",
@@ -74,7 +74,7 @@
           "social": "Social",
           "skills_list": {
             "software": ["React", "Next.js", "TypeScript", "Node.js", "Angular", ".NET", "C++", "C", "Java", "Python", "JavaScript", "HTML", "CSS", "SQL", "NoSQL"],
-            "technologies": ["Tailwind CSS", "MUI Library", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Trello", "Slack", "Visual Studio Code", "WebStorm", "PyCharm", "IntelliJ IDEA"],
+            "technologies": ["Tailwind CSS", "shadcn/ui", "React Query", "Zustand", "Zod", "NextAuth", "MUI", "Docker", "Bootstrap", "PostgreSQL", "MySQL", "Postman", "AWS", "Swagger", "Git", "GitHub", "Figma"],
             "documentation": ["Medium", "Notion", "Jira", "LaTeX", "JSON", "Canva", "Google Documents", "Google Sheets", "Microsoft Office"],
             "social": ["Teamwork", "Communication", "Problem Solving", "Crisis Management", "Time Management", "Learning Ability", "Community Management", "Mentorship", "Technical Leadership", "Documentation", "Discipline"]
           },
@@ -113,14 +113,21 @@
           "title": "Frontend Developer",
           "company": "Delege AI", 
           "period": "June 2025 - Present",
-          "description": "Development and maintenance of the Delege AI web application. Refactoring the codebase and adding new features within the framework of new UI designs.",
-          "technologies": ["React", "Tailwind CSS", "Next.js", "Git", "MUI Library", "Figma", "REST API"]
+          "description": "Actively working on frontend development of the Delege AI web application. Building component-based, best practice React applications using React, Tailwind, shadcn/ui, NextAuth, React Query, Zod, and Zustand. Leading codebase refactoring and new feature development within new UI design frameworks.",
+          "technologies": ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "NextAuth", "React Query", "Zod", "Zustand", "TypeScript", "Figma", "REST API"]
+        },
+        {
+          "title": "Frontend Developer",
+          "company": "İşler Kitap Evi - UniKazan",
+          "period": "September 2025 - Present",
+          "description": "Solely responsible for both frontend development and UI/UX design and improvement processes of the UniKazan education platform's admin panel, web application, and user panel pages. Building component-based, best practice React applications using React, Tailwind, shadcn/ui, React Query, Zod, and Zustand.",
+          "technologies": ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "React Query", "Zod", "Zustand", "TypeScript", "Figma", "UI/UX Design"]
         },
         {
           "title": "Full Stack Software Developer",
           "company": "Ziraat Technology",
-          "period": "September 2024 - Present",
-          "description": "Developing and maintaining web-based applications for banking operations.",
+          "period": "September 2024 - June 2025",
+          "description": "Developing and maintaining web-based applications for banking operations. Created enterprise solutions using .NET backend and React frontend technologies.",
           "technologies": ["React", "Node.js", ".NET", "Git", "MySQL", "IntelliJ IDE", "Visual Studio Code"]
         },
         {
@@ -161,4 +168,3 @@
       ]
     }
   }
-  
