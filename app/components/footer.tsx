@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { useLocale } from "@/contexts/LocaleContext"
 import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 
@@ -18,7 +17,7 @@ const FooterMark = () => (
 )
 
 export default function Footer() {
-  const { t, locale } = useLocale()
+  const { locale } = useLocale()
 
   const socialLinks = [
     { 
